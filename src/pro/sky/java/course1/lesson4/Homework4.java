@@ -15,26 +15,26 @@ public class Homework4 {
 
         System.out.println();
 
-        for (count = 10; count > 0; count--) {
-            System.out.print(count + " ");
+        for (int c = 10; c > 0; c--) {
+            System.out.print(c + " ");
         }
         System.out.println();
 
         //Задание 2
 
-        for (int friday = 5; friday < 31; friday = friday + 7) {
+        for (int friday = 5; friday < 31; friday += 7) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
         }
 
         //Задание 3
 
         int currentYear = 2021;
-        int twoCenturyAgoComet = currentYear - 200;
-        int futureCenturyComet = currentYear + 100;
+        int begin = currentYear - 200;
+        int end = currentYear + 100;
 
-        for (int cometYear = 0; cometYear < futureCenturyComet; cometYear = cometYear + 79) {
-            if (cometYear > twoCenturyAgoComet) {
-                System.out.println(cometYear);
+        for (int g = begin; g < end; g++ ) {
+            if (g % 79 == 0) {
+                System.out.println(g);
             }
         }
 
@@ -42,29 +42,28 @@ public class Homework4 {
         //Задание 4
 
         for (int i = 1; i <=30; i++) {
-            if (i % 3 ==0 && i % 5 ==0) {
-                System.out.println(i + ": ping pong");
-            } else if (i % 3 ==0) {
-                System.out.println(i + ": ping");
-            } else if (i % 5 ==0) {
-                System.out.println(i + ": pong");
-            } else {
-                System.out.println(i + ": ");
+            System.out.print(i + ": ");
+
+            if (i % 3 == 0) {
+                System.out.print("ping ");
             }
+            if (i % 5 == 0) {
+                System.out.print("pong");
             }
+            System.out.println();
+        }
         System.out.println();
 
         //Задание 5
-        //решение через массив? начала, но сдулась...
 
-        /*
         int a = 0;
         int b = 1;
-        int [] fibArray;
-        fibArray = new int[10];
-        for (int i = 0; i < fibArray.length; i ++) {
 
-        }*/
+        for (int r = 0; r < 5; r ++) {
+            System.out.print(a + " " + b + " ");
+            a += b;
+            b += a;
+        }
 
     }
 }
